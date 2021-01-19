@@ -50,7 +50,7 @@ public class RedisUtil {
             //导致连接池中的连接坏掉： 1 服务器端重启过 2 网断过 3 服务器端维持空闲连接超时
             jedisPoolConfig.setTestOnBorrow(true);
              // jedisPoolConfig.setTestWhileIdle(true);
-            jedisPool=new JedisPool("hdp1",6379 );
+            jedisPool = new JedisPool(jedisPoolConfig, "hdp1", 6379);
         }
         Jedis jedis = jedisPool.getResource();
         return jedis;
