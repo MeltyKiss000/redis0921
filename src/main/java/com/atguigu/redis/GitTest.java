@@ -5,3 +5,6 @@ public class GitTest {
 
     }
 }
+
+class Person {
+}
